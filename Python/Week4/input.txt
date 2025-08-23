@@ -1,0 +1,3 @@
+Welcome to my world
+You can learn programming
+Let's start with Python
