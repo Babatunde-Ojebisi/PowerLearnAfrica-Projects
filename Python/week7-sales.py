@@ -7,9 +7,9 @@ import seaborn as sns
 print("=== SALES DATA ANALYSIS & VISUALIZATION ===")
 
 try:
-    # ---------------------------------
+
     # Task 1: Load and Explore Dataset
-    # ---------------------------------
+    
     print("\n=== TASK 1: LOAD & EXPLORE DATASET ===")
 
     # Create a simple sales dataset
@@ -35,9 +35,9 @@ try:
     print("\nMissing values per column:")
     print(df.isnull().sum())
 
-    # ---------------------------------
+    
     # Task 2: Basic Data Analysis
-    # ---------------------------------
+    
     print("\n=== TASK 2: BASIC DATA ANALYSIS ===")
 
     if "Sales" not in df.columns:
@@ -62,9 +62,9 @@ try:
           "while Tablets generally sell the least. "
           "Among regions, North and South tend to perform stronger than East/West.")
 
-    # ---------------------------------
+    
     # Task 3: Data Visualization
-    # ---------------------------------
+    
     print("\n=== TASK 3: DATA VISUALIZATION ===")
 
     sns.set(style="whitegrid")
@@ -111,3 +111,4 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
+
