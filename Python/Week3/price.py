@@ -4,7 +4,7 @@
 # is 20% or higher, apply the discount; otherwise, return the original price.
 
 
-def calculate(price, discount_percent):
+def calculate_discount(price, discount_percent):
     if discount_percent >= 20:
         d_price = price * (discount_percent/100)
         new_price = price - d_price
@@ -12,18 +12,22 @@ def calculate(price, discount_percent):
     else:
         return price
 
-print(calculate(100,18))
+print(calculate_discount(100,18))
 
 #Using the calculate_discount function, prompt the user to enter the original 
 #price of an item and the discount percentage. Print the final price after 
 # applying the discount, or if no discount was applied, print the original price.
 
-price = float(input("Enter Price: "))
-d_price = float(input("Enter discount(%): "))
+try:
+    price = float(input("Enter Price: "))
+    d_price = float(input("Enter discount(%): "))
 
 
-cost = calculate(price, d_price)
-if d_price < 20:
-    print(f"Ohps! No discount charge for you. Your total cost is {cost}")
-else:
-    print(f"Discount awarded. Your total cost is {cost}")
+    cost = calculate_discount(price, d_price)
+    if d_price < 20:
+        print(f"Ohps! No discount charge for you. Your total cost is {cost.2f}")
+    else:
+        print(f"Discount awarded. Your total cost is {cost.2f}")
+        
+except ValueError:
+    print("Invalid input! Please enter numeric values only.")
